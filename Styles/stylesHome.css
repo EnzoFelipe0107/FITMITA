@@ -1,0 +1,122 @@
+/* Enzo, achei melhor esconder a barra de rolagem pra preservar e focar no visual do site, usando tais propriedades.  */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: black;
+    font-family: 'Poppins';
+    padding: 0;
+    display: flex;
+/* direcionando a direção do display para forma de coluna */
+    flex-direction: column;
+/* barra de rolagem escondida */
+    overflow: hidden;
+/* permitir scroll mesmo sem o visual da barra */
+    overflow-y: scroll; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    background-color: #46DF27;
+    /* sombreamento da navbar */
+    box-shadow: 0 1px 5px black;
+}
+
+.navbar {
+/* Evitar que os ícones fiquem ao fim da tela */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2px 10px;
+    display: flex;
+    align-items: center;
+/* determinando o espaçamento entre ícones e links */
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 60px; 
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+/* tirando o sublinhado dos links na navbar */
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+
+.carrinho img {
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.carrinho img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    padding: 6px 0;
+  }
+}
+
+
+.prato-principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 40px;
+}
+
+.prato-principal .texto-prato {
+  flex: 1;
+}
+
+.prato-principal .texto-prato h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.prato-principal .texto-prato p {
+  margin-top: 15px;
+  color: #333;
+}
+
+.prato-principal .imagem-prato img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
