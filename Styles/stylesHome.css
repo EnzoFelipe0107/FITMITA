@@ -1,4 +1,4 @@
-/* Enzo, achei melhor esconder a barra de rolagem pra preservar e focar no visual do site, usando tais propriedades.  */
+/* Esconder a barra de rolagem para preservar o visual do site */
 ::-webkit-scrollbar {
   display: none;
 }
@@ -8,17 +8,18 @@ html, body {
     margin: 0;
     background-color: #f5f5f5;
     color: black;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     padding: 0;
     display: flex;
-/* direcionando a direção do display para forma de coluna */
+    /* direcionando a direção do display para forma de coluna */
     flex-direction: column;
-/* barra de rolagem escondida */
+    /* barra de rolagem escondida */
     overflow: hidden;
-/* permitir scroll mesmo sem o visual da barra */
+    /* permitir scroll mesmo sem o visual da barra */
     overflow-y: auto; 
     overflow-x: hidden; 
 }
+
 main {
     flex: 1;
 }
@@ -37,18 +38,22 @@ main {
 }
 
 .navbar {
-/* Evitar que os ícones fiquem ao fim da tela */
+    /* Evitar que os ícones fiquem ao fim da tela */
     max-width: 1200px;
     margin: 0 auto;
     padding: 2px 10px;
     display: flex;
     align-items: center;
-/* determinando o espaçamento entre ícones e links */
+    /* determinando o espaçamento entre ícones e links */
     justify-content: space-between;
 }
 
 .logo img {
     height: 60px; 
+}
+
+.logo a {
+    text-decoration: none;
 }
 
 .nav-links {
@@ -57,7 +62,7 @@ main {
 }
 
 .nav-links a {
-/* tirando o sublinhado dos links na navbar */
+    /* tirando o sublinhado dos links na navbar */
     text-decoration: none;
     color: black;
     font-weight: 600;
@@ -67,7 +72,6 @@ main {
 .nav-links a:hover {
     color: #007bff;
 }
-
 
 .carrinho img {
     height: 30px;
@@ -95,7 +99,6 @@ main {
     padding: 6px 0;
   }
 }
-
 
 .prato-principal {
   display: flex;
@@ -127,14 +130,6 @@ main {
   box-shadow: 0px 2px 20px black;
 }
 
-.prato-principal .imagem-prato2 img {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0px 2px 20px black;
-}
-
 .footer {
   background: #111;
   color: #fff;
@@ -149,7 +144,6 @@ main {
   gap: 20px;
   max-width: 800px;
   margin: 0 auto;
-
 }
 
 .footer h4 {
