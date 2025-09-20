@@ -1,0 +1,189 @@
+/* Esconder a barra de rolagem para preservar o visual do site */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #f5f5f5;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    display: flex;
+    /* direcionando a direção do display para forma de coluna */
+    flex-direction: column;
+    /* barra de rolagem escondida */
+    overflow: hidden;
+    /* permitir scroll mesmo sem o visual da barra */
+    overflow-y: auto; 
+    overflow-x: hidden; 
+}
+
+main {
+    flex: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    background-color: #46DF27;
+    /* sombreamento da navbar */
+    box-shadow: 0 1px 5px black;
+}
+
+.navbar {
+    /* Evitar que os ícones fiquem ao fim da tela */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2px 10px;
+    display: flex;
+    align-items: center;
+    /* determinando o espaçamento entre ícones e links */
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 60px; 
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    /* tirando o sublinhado dos links na navbar */
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.carrinho img {
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.carrinho img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    padding: 6px 0;
+  }
+}
+
+.prato-principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 100px;
+}
+
+.prato-principal .texto-prato {
+  flex: 1;
+}
+
+.prato-principal .texto-prato h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.prato-principal .texto-prato p {
+  margin-top: 15px;
+  color: #333;
+}
+
+.prato-principal .imagem-prato img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 2px 20px black;
+}
+
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 15px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #46DF27; /* verde destaque */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 2px 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #46DF27;
+}
+
+.footer-social a {
+  font-size: 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #00c853;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}

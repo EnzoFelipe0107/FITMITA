@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Fitmita</title>
+    <meta name="description" content="Entre em contato com a Fitmita. Telefone, WhatsApp, email e endereço. Estamos prontos para atender você!" />
+    <link rel="stylesheet" href="styles/stylesContato.css">
+    <link rel="icon" type="image/png" href="arquivos/logofitmita sem fundo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="arquivos/logofitmita sem fundo.png" alt="Fitmita Logo">
+                </a>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="contato.html">Contato</a>
+                <a href="planos.html">Planos</a>
+                <a href="login.html">Login/Cadastro</a>
+            </div>
+
+            <div class="carrinho">
+                <img src="arquivos/carrinho de compras.png" alt="Ícone de carrinho">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">Entre em Contato</h1>
+            
+            <div class="contato-content">
+                <!-- Formulário de Contato -->
+                <div class="contato-form">
+                    <div class="form-card">
+                        <h2>Fale Conosco</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="nome">Nome Completo</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" placeholder="Conte-nos como podemos ajudar..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Informações de Contato -->
+                <div class="contato-info">
+                    <div class="info-card">
+                        <h2>Informações</h2>
+                        <div class="info-item">
+                            <h3>Telefone</h3>
+                            <p>(85) 3371-1607</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h3>WhatsApp</h3>
+                            <p>(85) 99647-9203</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h3>Email</h3>
+                            <p>contato@fitmita.com.br</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h3>Endereço</h3>
+                            <p>
+                                Av Aguanambi 251<br />
+                               José Bonifácio, Fortaleza - CE<br />
+                                CEP: 60055-400
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="horario-card">
+                        <h2>Horário de Funcionamento</h2>
+                        <div class="horario-item">
+                            <p><span class="dia">Segunda a Sexta:</span> 7:00 - 22:00</p>
+                            <p><span class="dia">Sábado:</span> 9:00 - 15:00</p>  
+                            <p><span class="dia">Domingo:</span> 9:00 - 12:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h4>Fitmita</h4>
+            </div>
+
+            <div class="footer-social">
+                <a href="#" aria-label="Twitter">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/twitter--v1.png" alt="Twitter">
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Fitmita. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

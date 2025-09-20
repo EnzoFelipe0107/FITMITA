@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Fitmita</title>
+    <meta name="description" content="Finalize seu pedido de marmitas fitness saudáveis. Revise seus itens e conclua sua compra." />
+    <link rel="stylesheet" href="styles/stylesBase.css">
+    <link rel="stylesheet" href="styles/stylesCarrinho.css">
+    <link rel="icon" type="image/png" href="arquivos/logo-fitmita.png">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="arquivos/logo-fitmita.png" alt="Fitmita Logo">
+                </a>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="contato.html">Contato</a>
+                <a href="planos.html">Planos</a>
+                <a href="login.html">Login/Cadastro</a>
+            </div>
+
+            <div class="carrinho" onclick="window.location.href='carrinho.html'">
+                <img src="arquivos/carrinho de compras.png" alt="Ícone de carrinho">
+                <span id="carrinho-count" class="carrinho-count"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="carrinho-container">
+            <h1 class="page-title">Seu Carrinho</h1>
+            
+            <div id="carrinho-vazio" class="carrinho-vazio" style="display: none;">
+                <h2>Seu carrinho está vazio</h2>
+                <p>Que tal dar uma olhada no nosso delicioso cardápio?</p>
+                <a href="menu.html" class="btn-menu">Ver Cardápio</a>
+            </div>
+
+            <div id="carrinho-itens">
+                <!-- Itens do carrinho serão inseridos aqui via JavaScript -->
+            </div>
+
+            <div id="carrinho-total" class="carrinho-total" style="display: none;">
+                <div class="total-valor">
+                    Total: R$ <span id="valor-total">0,00</span>
+                </div>
+                <button class="btn-finalizar" onclick="finalizarPedido()">
+                    Finalizar Pedido
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h4>Fitmita</h4>
+            </div>
+
+            <div class="footer-social">
+                <a href="#" aria-label="Twitter">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/twitter--v1.png" alt="Twitter">
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Fitmita. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

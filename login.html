@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login/Cadastro - Fitmita</title>
+    <meta name="description" content="Faça login ou cadastre-se na Fitmita. Acesse sua conta e aproveite nossos planos de marmitas fitness!" />
+    <link rel="stylesheet" href="styles/stylesLogin.css">
+    <link rel="icon" type="image/png" href="arquivos/logofitmita sem fundo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="arquivos/logofitmita sem fundo.png" alt="Fitmita Logo">
+                </a>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="contato.html">Contato</a>
+                <a href="planos.html">Planos</a>
+                <a href="login.html">Login/Cadastro</a>
+            </div>
+
+            <div class="carrinho">
+                <img src="arquivos/carrinho de compras.png" alt="Ícone de carrinho">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">Bem-vindo à Fitmita</h1>
+            
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" onclick="showTab('login')">Entrar</button>
+                    <button class="tab-btn" onclick="showTab('cadastro')">Cadastrar</button>
+                </div>
+                
+                <!-- Login Form -->
+                <div id="login" class="tab-content active">
+                    <div class="form-card">
+                        <h2>Fazer Login</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="login-email">Email</label>
+                                <input type="email" id="login-email" name="email" placeholder="seu@email.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="login-senha">Senha</label>
+                                <input type="password" id="login-senha" name="senha" placeholder="Sua senha" required>
+                            </div>
+                            
+                            <button type="submit" class="btn-submit">Entrar</button>
+                            
+                            <div class="form-footer">
+                                <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Cadastro Form -->
+                <div id="cadastro" class="tab-content">
+                    <div class="form-card">
+                        <h2>Criar Conta</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="cadastro-nome">Nome Completo</label>
+                                <input type="text" id="cadastro-nome" name="nome" placeholder="Seu nome completo" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cadastro-email">Email</label>
+                                <input type="email" id="cadastro-email" name="email" placeholder="seu@email.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cadastro-telefone">Telefone</label>
+                                <input type="tel" id="cadastro-telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cadastro-senha">Senha</label>
+                                <input type="password" id="cadastro-senha" name="senha" placeholder="Escolha uma senha forte" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cadastro-confirmar">Confirmar Senha</label>
+                                <input type="password" id="cadastro-confirmar" name="confirmar" placeholder="Confirme sua senha" required>
+                            </div>
+                            
+                            <button type="submit" class="btn-submit">Criar Conta</button>
+                            
+                            <div class="form-footer">
+                                <p class="terms">
+                                    Ao criar uma conta, você concorda com nossos 
+                                    <a href="#">Termos de Uso</a> e 
+                                    <a href="#">Política de Privacidade</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h4>Fitmita</h4>
+            </div>
+
+            <div class="footer-social">
+                <a href="#" aria-label="Twitter">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/twitter--v1.png" alt="Twitter">
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Fitmita. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
