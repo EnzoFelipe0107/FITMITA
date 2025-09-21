@@ -30,15 +30,18 @@ main {
 .header {
     width: 100%;
     background-color: #46DF27;
+    /* sombreamento da navbar */
     box-shadow: 0 1px 5px black;
 }
 
 .navbar {
+    /* Evitar que os ícones fiquem ao fim da tela */
     max-width: 1200px;
     margin: 0 auto;
     padding: 2px 10px;
     display: flex;
     align-items: center;
+    /* determinando o espaçamento entre ícones e links */
     justify-content: space-between;
 }
 
@@ -56,6 +59,7 @@ main {
 }
 
 .nav-links a {
+    /* tirando o sublinhado dos links na navbar */
     text-decoration: none;
     color: black;
     font-weight: 600;
@@ -74,6 +78,23 @@ main {
 
 .carrinho img:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    padding: 6px 0;
+  }
 }
 
 .container {
@@ -277,6 +298,7 @@ main {
     margin-right: 10px;
     text-decoration: none;
     transition: 0.3s;
+    
 }
 
 .footer-social a:hover {
@@ -287,4 +309,5 @@ main {
     text-align: center;
     font-size: 14px;
     color: white;
+    transform: scale(1.1);
 }
